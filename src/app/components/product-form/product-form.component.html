@@ -1,0 +1,30 @@
+<form class="mt-3" [formGroup]="form" (ngSubmit)="onFormSubmit()">
+    <div class="row">
+        <input type="hidden" formControlName="id">
+        <div class="col-6">
+            <div class="form-group">
+                <label for="name" class="text-info">Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" formControlName="name" autocomplete="off" >
+                <p class="text-danger" *ngIf="submitted && form.get('name')?.errors?.['required']">El campo es obligatorio</p>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label for="price" class="text-info">Precio</label>
+                <input type="number" class="form-control" name="price" id="price" formControlName="price" autocomplete="off">
+                <p class="text-danger" *ngIf="submitted && form.get('price')?.errors?.['required']">El campo es obligatorio</p>
+                <p class="text-danger" *ngIf="submitted && form.get('price')?.errors?.['min']">El número ingresado debe de ser mayor a cero</p>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label for="price" class="text-info">Fecha</label>
+                <input type="date" class="form-control" name="fecha" id="fecha" formControlName="fecha" autocomplete="off">
+                <p class="text-danger" *ngIf="submitted && form.get('fecha')?.errors?.['required']">El campo es obligatorio</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 mt-2">
+        <input type="submit" name="submit" class="btn btn-primary" value="Guardar">
+    </div>
+</form>

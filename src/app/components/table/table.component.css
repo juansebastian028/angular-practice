@@ -1,0 +1,44 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 200px;
+    margin-bottom: 2rem;
+  }
+  
+  .mat-mdc-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+  
+  .mobile-label {
+    display: none;
+  }
+  
+  @media(max-width: 960px) {
+    .example-container{
+        margin-bottom: 2rem;
+    }
+
+    .mobile-label {
+      width: 80px;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    .mat-mdc-cell{
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+  
+    .mat-header-row {
+      display: none;
+    }
+  
+    .mat-mdc-row { 
+      flex-direction: column;
+      padding: 8px 24px;
+    }
+  }
+  

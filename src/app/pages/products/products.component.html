@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<div class="container mt-5">
+    <app-table
+        (add)="onAddProduct()"
+        (onAction)="executeAction($event)"
+        [dataColumns]="productsColumns" 
+        [dataRows]="productsRows"
+    >
+    </app-table>
+</div>

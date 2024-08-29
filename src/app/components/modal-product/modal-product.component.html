@@ -1,0 +1,9 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-title text-red text-bold">Producto</h4>
+</div>
+<div class="modal-body">
+    <app-product-form [product]="data" [modalProduct]="modal" [productsRows]="productsRows"></app-product-form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
+</div>
